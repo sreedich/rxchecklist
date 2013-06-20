@@ -1,4 +1,6 @@
 RxchecklistApp::Application.routes.draw do
+  devise_for :users
+
   get "page/index"
 
   # The priority is based upon order of creation:
