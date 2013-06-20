@@ -7,14 +7,17 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'devise'
+gem 'sextant'
 
 group :test, :development do 
   gem 'rspec-rails'
+  gem 'pry'
 end
 
 group :test do 
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 # Gems used only for assets and not required

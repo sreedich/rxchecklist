@@ -1,5 +1,17 @@
 require 'spec_helper'
 
+
+     # Acceptance Criteria: 
+     # page_index
+     # 1) From the home page, user should be able fill out
+     #    sign up information
+     # 2) User must enter email, password and click a sign up button *
+     # 3) If account is successfully created, user will be notified *
+     # 4) If account is not successfully created, 
+     #    user will be redirected to page_index
+     # 5) Successfully registered user will be redirected to explores_path
+
+
 describe 'user creates an account' do 
 
   it 'user visits signup page' do
@@ -31,6 +43,7 @@ describe 'user creates an account' do
     fill_in 'Password', with: '12345678'
     fill_in 'Password confirmation', with: '12345678'
     click_on 'Sign up'
+    save_and_open_page
     expect(current_path).to eql(root_path)
   end 
 
