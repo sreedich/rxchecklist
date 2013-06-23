@@ -3,6 +3,9 @@ RxchecklistApp::Application.routes.draw do
 
   get "page/index"
 
+  resources :checklists
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

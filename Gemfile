@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'devise'
 gem 'sextant'
+gem 'simple_form'
 
 group :test, :development do 
   gem 'rspec-rails'
@@ -17,6 +18,7 @@ end
 group :test do 
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
   gem 'launchy'
 end
 
