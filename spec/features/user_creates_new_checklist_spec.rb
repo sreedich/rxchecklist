@@ -12,13 +12,14 @@ require 'spec_helper'
 describe 'user creates a new checklist' do
 
 
-let!(:user){FactoryGirl.create(:user)}
+let(:user){FactoryGirl.create(:user)}
 
   it 'user visits checklist builder page' do 
     visit new_checklist_path
     expect(page).to have_content 'Checklist Title'
   end 
 
+  #refactor with nested resources 
   it 'allows a user to create a checklist' do 
     sign_in_as(user)
     visit new_checklist_path
@@ -28,13 +29,5 @@ let!(:user){FactoryGirl.create(:user)}
     expect(Checklist.count).to eql(1)
   end 
 
-# refactor this in authentication helper 
- # def sign_in_as(user)
- #    visit new_user_registration_path
- #    fill_in 'Email', with: user.email 
- #    fill_in 'Password', with: user.password 
- #    click_on 'Sign in'
- #  end
  
-
 end 
