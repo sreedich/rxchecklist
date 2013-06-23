@@ -2,5 +2,6 @@
 
 <%= simple_form_for @checklist do |f| %>
   <%= f.input :title %>
+  <%= f.input :user_id, collection: [1,2,3,4,5] %>
   <%= f.submit %>
 <% end %>
