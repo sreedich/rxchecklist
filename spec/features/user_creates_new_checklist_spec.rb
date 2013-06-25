@@ -27,7 +27,18 @@ let(:user) {FactoryGirl.create(:user)}
     fill_in 'Title', with: 'Checklist Title'
     click_on 'Create Checklist'
     expect(Checklist.count).to eql(1)
+    
   end 
+
+  it 'created checklist displays on new checklist page' do
+    sign_in_as(user)
+    visit new_user_checklist_path(user)
+    fill_in 'Title', with: 'This is a test Title'
+    click_on 'Create Checklist'
+    expect(current_path).to eql(user_checklists_path(user))
+    expect(page).to have_content 'successfully' 
+  end 
+
 
  
 end 
