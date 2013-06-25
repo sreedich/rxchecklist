@@ -1,6 +1,6 @@
 RxchecklistApp::Application.routes.draw do
-  devise_for :users
-
+  devise_for :users 
+# edit routes to only incluce what is needed using the only statement 
   get "page/index"
 
   resources :users do
