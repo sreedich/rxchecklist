@@ -4,16 +4,15 @@ class ChecklistsController < ApplicationController
   end 
 
   def new
-    @user = User.find(params[:user_id])
-    @checklist = @user.checklists.build 
+    @checklist = current_user.checklists.build 
   end 
 
   def create
-    @user = User.find(params[:user_id])
-    @checklist = @user.checklists.new(params[:checklist])
+
+    @checklist = current_user.checklists.new(params[:checklist])
 
     if @checklist.save!
-      redirect_to user_checklists_path, notice: 'checklist successfully created'
+      redirect_to user_path(current_user), notice: 'checklist successfully created'
     else
       render action: 'new'
     end 
