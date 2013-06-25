@@ -3,9 +3,13 @@ RxchecklistApp::Application.routes.draw do
 # edit routes to only incluce what is needed using the only statement 
   get "page/index"
 
-  resources :users do
-    resources :checklists 
+  resources :checklists do 
+    resources :tasks 
   end 
+
+  resources :users 
+  resources :checklists 
+
 
 
   # The priority is based upon order of creation:
