@@ -29,7 +29,7 @@ let(:user) {FactoryGirl.create(:user)}
     expect(Checklist.count).to eql(1)  
   end 
 
-  it 'created checklist displays on new checklist page' do
+  it 'created checklist displays on user page' do
     sign_in_as(user)
     visit new_checklist_path
     fill_in 'Title', with: 'This is a test Title'
