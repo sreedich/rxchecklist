@@ -1,9 +1,15 @@
 <p>Checklist Title</p>
 
-<%= simple_form_for @checklist do |f| %>
+
+
+<%= simple_nested_form_for @checklist do |f| %>
   <%= f.input :title %>
-  <%= f.submit %>
+  <%= f.fields_for :tasks do |task_form| %>
+  <%= task_form.input :name %>
+  <%= task_form.link_to_remove "Remove Task" %>
+  
 <% end %>
+  <%= f.link_to_add "Add Task", :tasks %>
+  <%= f.submit 'Create Checklist' %>
 
-
-
+<% end %>
