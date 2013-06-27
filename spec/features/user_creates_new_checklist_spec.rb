@@ -20,7 +20,6 @@ let(:user) {FactoryGirl.create(:user)}
     expect(page).to have_content 'Checklist Title'
   end 
 
-  #refactor with nested resources 
   it 'allows a user to create a checklist' do 
     sign_in_as(user)
     visit new_checklist_path
@@ -34,7 +33,8 @@ let(:user) {FactoryGirl.create(:user)}
     visit new_checklist_path
     fill_in 'Title', with: 'This is a test Title'
     click_on 'Create Checklist'
-    expect(current_path).to eql(user_path(user))
+    expect(Checklist.last.title).to eq('This is a test Title')
+    expect(current_path).to eql(checklist_path(Checklist.last))
     expect(page).to have_content 'successfully' 
   end 
  
