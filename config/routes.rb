@@ -1,16 +1,17 @@
 RxchecklistApp::Application.routes.draw do
+  resources :explore 
   devise_for :users 
 # edit routes to only incluce what is needed using the only statement 
   get "page/index"
 
-  resources :checklists do 
-    resources :tasks 
-  end 
+ 
+  resources :tasks 
+
 
   resources :users 
   resources :checklists 
 
-
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

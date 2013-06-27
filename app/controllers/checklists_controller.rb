@@ -12,12 +12,17 @@ class ChecklistsController < ApplicationController
     @checklist = current_user.checklists.new(params[:checklist])
 
     if @checklist.save!
-      redirect_to user_path(current_user), notice: 'checklist successfully created'
+      redirect_to @checklist, notice: 'checklist successfully created'
     else
       render action: 'new'
     end 
   end 
+
+  def show
+    @checklist = Checklist.find(params[:id])
+  end 
+
 end
 
 
-# nest tasks under checklist 
+

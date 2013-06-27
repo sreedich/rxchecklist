@@ -42,7 +42,7 @@ let(:user) {FactoryGirl.create(:user)}
   it 'navigates signed up user to index page' do
     visit new_user_registration_path
     sign_up_as(user_signup)
-    expect(current_path).to eql(root_path)
+    expect(current_path).to eql(explore_index_path)
   end 
 
   it 'rejects user signup when required fields are not filled out' do 

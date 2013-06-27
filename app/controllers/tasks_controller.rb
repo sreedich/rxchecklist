@@ -4,16 +4,14 @@ class TasksController < ApplicationController
   end 
 
   def new
-    @checklist = Checklist.find(params[:checklist_id])
-    @task = @checklist.tasks.build 
+    @task = Task.new
   end 
 
   def create
-    @checklist = Checklist.find(params[:checklist_id])
-    @task = @checklist.tasks.new(params[:task])
+    @task = Task.new(params[:task])
 
     if @task.save!
-      redirect_to checklist_tasks_path, notice: 'task successfully created'
+      redirect_to new_task_path, notice: 'task successfully created'
     else
       render action: 'new'
     end 
