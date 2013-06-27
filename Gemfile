@@ -11,6 +11,7 @@ gem 'sextant'
 gem 'simple_form'
 gem "nested_form", :git => 'git://github.com/ryanb/nested_form.git'
 
+
 group :test, :development do 
   gem 'rspec-rails'
   gem 'pry'
