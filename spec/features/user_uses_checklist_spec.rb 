@@ -2,10 +2,6 @@ require 'spec_helper'
 
 describe 'signed in user uses created checklist' do 
 
-  # it 'user selects checklist for use' do
-  #   visit explore_index_path 
-  #   click_on 'Use Checklist'
-  #   expect(page).to have_content 'Complete'
-  # end 
+
 
 end
