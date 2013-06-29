@@ -1,4 +1,12 @@
 <div>Explore</div>
+
+<ul>
+  <% @checklists.each do |c| %>
+   <li> <%= c.title %> </li>
+  <%= link_to 'See Details', checklist_path(c) %>
+  <% end %>
+</ul>
+
 <div>Trending</div>
 <div>Featured</div>
 <div>Create New Checklist</div>
