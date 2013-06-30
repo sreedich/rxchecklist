@@ -2,3 +2,6 @@
 <% @checklist.tasks.each do |task| %>
 <%= task.name %>
 <% end %> 
+
+
+<%= link_to 'Use Checklist', new_checklist_checklist_run_path(@checklist) %>
