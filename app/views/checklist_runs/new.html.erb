@@ -1,5 +1,15 @@
 <p>Analytics</p>
 
 
-<%= link_to 'Complete', new_checklist_checklist_run_path(@checklist) %>
+
+<%= @checklist.title %>
+<%= simple_form_for [@checklist, @checklist_run] do |f| %>
+    <%= f.simple_fields_for :task_completions do |form| %>
+      <%= form.label :completed, label: form.object.task.name %>
+      <%= form.input :completed, as: :boolean, label: false %> 
+    <% end %> 
+    <%= f.submit 'Complete' %>
+<% end %> 
+
+<%# link_to 'Complete', new_checklist_checklist_run_path(@checklist) %>
 <!-- leaving off here - look at the nested resources for checklist run and controller  -->

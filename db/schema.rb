@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130630184618) do
+ActiveRecord::Schema.define(:version => 20130701180448) do
 
   create_table "checklist_runs", :force => true do |t|
     t.integer  "checklist_id", :null => false
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(:version => 20130630184618) do
     t.integer  "user_id",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "task_completions", :force => true do |t|
+    t.integer  "task_id"
+    t.integer  "checklist_run_id"
+    t.string   "state"
+    t.datetime "checked_off_at"
+    t.boolean  "completed"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "tasks", :force => true do |t|

@@ -8,7 +8,6 @@ let(:checklist) {FactoryGirl.create(:checklist)}
   it 'user clicks on use checklist' do 
     sign_in_as(user) 
     visit checklist_path(checklist)
-    save_and_open_page
     click_on 'Use Checklist'
     expect(page).to have_content 'Analytics'
   end 
