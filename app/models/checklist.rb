@@ -4,6 +4,7 @@ class Checklist < ActiveRecord::Base
   validates_presence_of :user_id
   belongs_to :user
   has_many :tasks
+  has_many :checklist_runs
   accepts_nested_attributes_for :tasks 
   
 end
