@@ -9,7 +9,9 @@ RxchecklistApp::Application.routes.draw do
 
 
   resources :users 
-  resources :checklists 
+  resources :checklists do 
+    resources :checklist_runs
+  end 
 
   
 
