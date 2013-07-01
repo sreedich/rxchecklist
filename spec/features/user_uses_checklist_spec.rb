@@ -13,7 +13,7 @@ let(:checklist) {FactoryGirl.create(:checklist)}
     expect(page).to have_content 'Analytics'
   end 
 
-  it 'user views checklist items' do
+  pending 'user views checklist items' do
     previous_count = ChecklistRun.count  
     sign_in_as(user)
     checklist 
