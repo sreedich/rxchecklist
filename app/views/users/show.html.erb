@@ -1,0 +1,12 @@
+
+Your Checklists 
+<% current_user.checklists.each do |checklist|%>
+  <%= checklist.title %>
+<% end %>
+
+Used Checklists
+<% current_user.completed_checklists.each do |completed_checklist| %> 
+  <%= completed_checklist.title %>
+<% end %> 
+
+

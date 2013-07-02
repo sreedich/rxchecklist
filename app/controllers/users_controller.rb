@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @checklist = Checklist.where(:user_id => current_user)
   end 
   
 end

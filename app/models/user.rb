@@ -10,5 +10,11 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   has_many :checklists
   has_many :checklist_runs
+  has_many :completed_checklists, 
+    through: :checklist_runs,
+    readonly: true, 
+    source: :checklist 
+
+    #inverse, destroy dependency 
 
 end
