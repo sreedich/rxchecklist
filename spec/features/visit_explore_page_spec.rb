@@ -25,7 +25,8 @@ describe 'explore page' do
     sign_in_as(user)
     checklists 
     visit explore_index_path
-    expect(page).to have_content 'This is an awesome checklist title'
+    expect(page).to have_content checklists[0].title
+    expect(page).to have_content checklists[9].title
   end 
 
   it 'user navigates to checklist show page' do 
@@ -33,7 +34,16 @@ describe 'explore page' do
     checklist
     visit explore_index_path
     click_link 'See Details'
-    expect(page).to have_content 'This is an awesome checklist title'
+    expect(page).to have_content checklist.title
   end 
+
+  it 'user can search for a checklist' do 
+    sign_in_as(user) 
+    checklists 
+    visit explore_index_path
+    fill_in :q_title_cont, with: checklists[9].title
+    click_on 'Search'
+    expect(page).to have_content checklists[9].title
+  end
 
 end 

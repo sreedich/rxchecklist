@@ -1,5 +1,13 @@
 <div>Explore</div>
 
+<%= search_form_for @q, url: explore_index_path, :builder => SimpleForm::FormBuilder do |f| %>
+  <div class="field">
+    <%= f.label :title_cont, "Name contains" %>
+    <%= f.text_field :title_cont %>
+  </div>
+  <div class="actions"><%=f.submit "Search"%></div>
+<% end %>
+
 <ul>
   <% @checklists.each do |c| %>
    <li> <%= c.title %> </li>
@@ -12,3 +20,4 @@
 <div>Create New Checklist</div>
 
 <%= link_to "Create New Checklist", new_checklist_path %>
+
