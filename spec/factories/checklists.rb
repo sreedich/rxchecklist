@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :checklist do
-    title 'This is an awesome checklist title'
+    sequence(:title) {|n| "title#{n}" }
+    # title 'This is an awesome checklist title'
     user 
   end
 end 
