@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'explore page' do 
 
   let(:user) {FactoryGirl.create(:user)}
-  let(:checklists) {FactoryGirl.create_list(:checklist, 10)}
+  let(:checklists) {FactoryGirl.create_list(:checklist, 20)}
   let(:checklist) {FactoryGirl.create(:checklist)}
 
   it 'user visits explore page' do 
@@ -25,7 +25,8 @@ describe 'explore page' do
     sign_in_as(user)
     checklists 
     visit explore_index_path
-    expect(page).to have_content 'This is an awesome checklist title'
+    expect(page).to have_content checklists[0].title
+    expect(page).to have_content checklists[9].title
   end 
 
   it 'user navigates to checklist show page' do 
@@ -33,7 +34,33 @@ describe 'explore page' do
     checklist
     visit explore_index_path
     click_link 'See Details'
-    expect(page).to have_content 'This is an awesome checklist title'
+    expect(page).to have_content checklist.title
   end 
+
+  it 'user can search for a checklist' do 
+    sign_in_as(user) 
+    checklists 
+    visit explore_index_path
+    fill_in :q_title_cont, with: checklists[9].title
+    click_on 'Search'
+    expect(page).to have_content checklists[9].title
+  end
+
+  it 'user sees a list of 10 checklists' do 
+    sign_in_as(user)
+    checklists
+    visit explore_index_path
+    expect(page).to have_content checklists[9].title
+    expect(page).to_not have_content checklists[10].title
+  end
+
+  it 'user navigates to 2nd page of checklists' do 
+    sign_in_as(user)
+    checklists
+    visit explore_index_path
+    click_on 'Next'
+    expect(page).to have_content checklists[10].title
+    expect(page).to_not have_content checklists[9].title
+  end
 
 end 
