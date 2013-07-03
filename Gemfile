@@ -11,6 +11,7 @@ gem 'sextant'
 gem 'simple_form'
 gem "nested_form", :git => 'git://github.com/ryanb/nested_form.git'
 gem "ransack"
+gem 'kaminari'
 
 group :test, :development do 
   gem 'rspec-rails'

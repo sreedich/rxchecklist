@@ -8,6 +8,8 @@
   <div class="actions"><%=f.submit "Search"%></div>
 <% end %>
 
+<%= paginate @checklists %>
+
 <ul>
   <% @checklists.each do |c| %>
    <li> <%= c.title %> </li>
