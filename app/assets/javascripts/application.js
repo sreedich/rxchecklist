@@ -14,3 +14,22 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery_nested_form
+
+$(function(){
+  $('[type=checkbox]').change(function(e){
+
+    var checked_count = $('[type=checkbox]:checked').length;
+    var total_checks = $('[type=checkbox]').length;
+    $('.check-stats').html(checked_count + "/" + total_checks);
+    
+  });
+
+  var g = new JustGage({
+    id: "gauge", 
+    value: 67, 
+    min: 0,
+    max: 100,
+    title: "Progress"
+  }); 
+
+});

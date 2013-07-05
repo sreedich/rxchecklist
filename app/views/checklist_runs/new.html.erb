@@ -1,6 +1,7 @@
 <p>Analytics</p>
+<div class="check-stats">0/<%= @checklist_run.task_completions.count %></div>
 
-
+<div id="gauge" style="width:100px; height:80px"></div>
 
 <%= @checklist.title %>
 <%= simple_form_for [@checklist, @checklist_run] do |f| %>
