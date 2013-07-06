@@ -24,6 +24,9 @@
   width: 1440px;
 }
 
+.navbar-inner {
+  height: 65px;
+}
 
 
 .heading-static {
@@ -42,9 +45,9 @@
   padding-left: 100px;
 }
 
-.form-horizontal {
+.form-signup {
   margin-top: 80px;
-  // margin-left: -100px;
+  margin-left: 40px;
 }
 
 .control-label{
@@ -58,7 +61,7 @@
 }
 
 .static-field {
-  width: 240px;
+  width: 236px;
 }
 
 
