@@ -1,0 +1,64 @@
+ .notice {
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    padding: 000;
+  }
+
+   .alert {
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    padding: 000;
+  }
+
+
+
+.jumbo {
+  border: 1px #202021; 
+  margin-left: -250px; 
+  margin-top: -40px;
+  background: #202021; 
+  height: 439px; 
+  width: 1440px;
+}
+
+.heading-static {
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+
+.subheading-static {
+  margin-left: 300px;
+  // margin-top: 100px;
+}
+
+.sign-up-static {
+  // margin-left: 200px;
+  padding-left: 100px;
+}
+
+
+.control-lable{
+  color: transparent;
+}
+
+
+.btn-success{
+  padding: 10px 100px 10px 100px;
+}
+
+.static-field {
+  width: 240px;
+}
+
+.form-horizontal {
+  margin-top: 100px;
+  margin-left: -100px;
+}
+
+
+
+// # leaving off need to figure out form-horizontal placement - it moves only when the rendered form is within the tags
+
