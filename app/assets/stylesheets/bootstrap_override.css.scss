@@ -18,10 +18,13 @@
   border: 1px #202021; 
   margin-left: -250px; 
   margin-top: -40px;
-  background: #202021; 
+  // background: rgb(47, 47, 162) url('minimalicon.png') center repeat; 
+  // background: rgb(47, 47, 162); opacity: 0.9;
   height: 439px; 
   width: 1440px;
 }
+
+
 
 .heading-static {
   margin-left: 300px;
@@ -39,9 +42,14 @@
   padding-left: 100px;
 }
 
+.form-horizontal {
+  margin-top: 80px;
+  // margin-left: -100px;
+}
 
-.control-lable{
-  color: transparent;
+.control-label{
+  color: black;
+
 }
 
 
@@ -53,10 +61,9 @@
   width: 240px;
 }
 
-.form-horizontal {
-  margin-top: 100px;
-  margin-left: -100px;
-}
+
+
+
 
 
 
