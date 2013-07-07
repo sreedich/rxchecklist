@@ -15,15 +15,32 @@
       <ul class="nav">
         <li><a href="/explore">Explore</a></li>
         <li><a href="/checklists/new">New Checklist</a></li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to "Profile", user_path(current_user) %>
+          <% else %>
+            <!-- nothing -->
+          <% end %>
+        </li>
         <li><%= render 'devise/menus/login' %></li>
         <li><%= render 'devise/menus/signup' %></li>
       </ul>
+      <div id="user_nav">
+
+      </div>
     </div>
   </div>
 
+
+
+    <div id="flash">
+     <% flash.each do |key, value| -%>
+     <%- unless key == :action %>
+     <div class="alert alert-<%= value %>"><%=h value %></div>
+     <%- end-%>
+     <% end -%>
+   </div>
   <div class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <%= yield %>
 

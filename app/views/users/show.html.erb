@@ -1,14 +1,23 @@
 
-Your Checklists 
-<% current_user.checklists.each do |checklist|%>
-  <%= checklist.title %><br>
-  <%= checklist.description %>
-<% end %>
+<div class="row">
+  <div class="your-check">
+    <div class="span6">
+      Your Checklists 
+      <% current_user.checklists.each do |checklist|%>
+        <%= checklist.title %><br>
+        <%= checklist.description %>
+      <% end %>
+    </div>
+  </div>
 
-Used Checklists
-<% current_user.completed_checklists.each do |completed_checklist| %> 
-  <%= completed_checklist.title %><br>
-  <%= completed_checklist.description %>
-<% end %> 
-
+  <div class="used-check">
+    <div class="span6">
+      Used Checklists
+      <% current_user.completed_checklists.each do |completed_checklist| %> 
+        <%= completed_checklist.title %><br>
+        <%= completed_checklist.description %>
+      <% end %> 
+    </div>
+  </div>
+</div>
 

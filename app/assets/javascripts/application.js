@@ -16,6 +16,9 @@
 //= require jquery_nested_form
 
 $(function(){
+
+  $("#flash").delay(2000).fadeOut();
+  
   $('[type=checkbox]').change(function(e){
 
     var checked_count = $('[type=checkbox]:checked').length;
@@ -31,5 +34,7 @@ $(function(){
     max: 100,
     title: "Progress"
   }); 
+
+
 
 });
