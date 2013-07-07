@@ -13,6 +13,7 @@
 <ul>
   <% @checklists.each do |c| %>
    <li> <%= c.title %> </li>
+   <li> <%= c.description %></li>
   <%= link_to 'See Details', checklist_path(c) %>
   <% end %>
 </ul>

@@ -3,7 +3,8 @@
 
 <div id="gauge" style="width:100px; height:80px"></div>
 
-<%= @checklist.title %>
+<%= @checklist.title %><br>
+<%= @checklist.description %>
 <%= simple_form_for [@checklist, @checklist_run] do |f| %>
     <%= f.simple_fields_for :task_completions do |form| %>
       <%= form.label :completed, label: form.object.task.name %>
