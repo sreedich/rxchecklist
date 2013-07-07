@@ -19,7 +19,7 @@
   margin-left: -250px; 
   margin-top: -40px;
   // background: rgb(47, 47, 162) url('minimalicon.png') center repeat; 
-  // background: rgb(47, 47, 162); opacity: 0.9;
+  background: #202021;
   height: 439px; 
   width: 1440px;
 }
@@ -31,13 +31,33 @@
 
 .heading-static {
   margin-left: 300px;
-  margin-top: 100px;
+  margin-top: 80px;
+  font-size: 50px;
+  line-height: 55px;
+  color: white;
 }
 
 
 .subheading-static {
   margin-left: 300px;
+  color: #8add6d;
   // margin-top: 100px;
+}
+
+.navbar .brand {
+float: left;
+display: block;
+padding: 20px 20px 10px;
+margin-left: -20px;
+font-size: 30px;
+font-weight: 400;
+color: #777777;
+text-shadow: 0 1px 0 white;
+}
+
+.nav{
+  padding: 10px;
+  float: right;
 }
 
 .sign-up-static {
@@ -74,6 +94,14 @@
   width: 400px;
 }
 
+
+.row-images {
+  padding-top: 80px;
+}
+
+.site-footer {
+  height: 100px;
+}
 
 // # leaving off need to figure out form-horizontal placement - it moves only when the rendered form is within the tags
 
