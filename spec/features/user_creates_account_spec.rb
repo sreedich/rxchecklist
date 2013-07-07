@@ -49,7 +49,7 @@ let(:user) {FactoryGirl.create(:user)}
     visit new_user_registration_path
     fill_in 'Email', with: 'tester@gmail.com'
     fill_in 'Password', with: ''
-    fill_in 'Password confirmation', with: '12345678'
+    fill_in 'Password Confirmation', with: '12345678'
     click_on 'Sign up'
     expect(User.count).to eql(0)
   end 
@@ -58,7 +58,7 @@ let(:user) {FactoryGirl.create(:user)}
     visit new_user_registration_path
     fill_in 'Email', with: 'tester@gmail.com'
     fill_in 'Password', with: ''
-    fill_in 'Password confirmation', with: '12345678'
+    fill_in 'Password Confirmation', with: '12345678'
     click_on 'Sign up'
     expect(page).to have_content 'errors prohibited this user from being saved'
   end 

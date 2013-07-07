@@ -1,0 +1,107 @@
+ .notice {
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    padding: 000;
+  }
+
+   .alert {
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    padding: 000;
+  }
+
+
+
+.jumbo {
+  border: 1px #202021; 
+  margin-left: -250px; 
+  margin-top: -40px;
+  // background: rgb(47, 47, 162) url('minimalicon.png') center repeat; 
+  background: #202021;
+  height: 439px; 
+  width: 1440px;
+}
+
+.navbar-inner {
+  height: 65px;
+}
+
+
+.heading-static {
+  margin-left: 300px;
+  margin-top: 80px;
+  font-size: 50px;
+  line-height: 55px;
+  color: white;
+}
+
+
+.subheading-static {
+  margin-left: 300px;
+  color: #8add6d;
+  // margin-top: 100px;
+}
+
+.navbar .brand {
+float: left;
+display: block;
+padding: 20px 20px 10px;
+margin-left: -20px;
+font-size: 30px;
+font-weight: 400;
+color: #777777;
+text-shadow: 0 1px 0 white;
+}
+
+.nav{
+  padding: 10px;
+  float: right;
+}
+
+.sign-up-static {
+  // margin-left: 200px;
+  padding-left: 100px;
+}
+
+.form-signup {
+  margin-top: 80px;
+  margin-left: 40px;
+}
+
+.control-label{
+  color: black;
+
+}
+
+
+.btn-success{
+  padding: 10px 100px 10px 100px;
+}
+
+.static-field {
+  width: 236px;
+}
+
+
+.img-static {
+  width: 100px
+}
+
+
+.icon-cog{
+  width: 400px;
+}
+
+
+.row-images {
+  padding-top: 80px;
+}
+
+.site-footer {
+  height: 100px;
+}
+
+// # leaving off need to figure out form-horizontal placement - it moves only when the rendered form is within the tags
+
