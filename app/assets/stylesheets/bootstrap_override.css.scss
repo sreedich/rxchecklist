@@ -150,5 +150,23 @@ a.check-link {
 
 
 
+// Checklist show page 
+
+.check-complete {
+  // margin-left: 200px;
+}
+
+.check-tasks {
+  list-style: none;
+  padding: 20px;
+  border: black 2px solid;
+  width: 400px;
+  font-size: 20px;
+}
+
+.check-descrip {
+  margin-left: -300px;
+}
+
 // # leaving off need to figure out form-horizontal placement - it moves only when the rendered form is within the tags
 
