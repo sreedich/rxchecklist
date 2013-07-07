@@ -8,13 +8,34 @@
 </head>
 <body>
 
-<%= render 'devise/menus/login' %>
-<%= render 'devise/menus/signup' %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">RxCheck</a>
+      <ul class="nav">
+        <li><a href="/explore">Explore</a></li>
+        <li><a href="/checklists/new">New Checklist</a></li>
+        <li><%= render 'devise/menus/login' %></li>
+        <li><%= render 'devise/menus/signup' %></li>
+      </ul>
+    </div>
+  </div>
 
-<%= yield %>
+  <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+
+    <hr>
+  <div class="site-footer">
+    <footer>
+      &copy; 2013
+    </footer>
+  </div>
+</div>
+
+
 
 </body>
 </html>
