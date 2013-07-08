@@ -7,8 +7,8 @@
 <%= @checklist.description %>
 <%= simple_form_for [@checklist, @checklist_run] do |f| %>
     <%= f.simple_fields_for :task_completions do |form| %>
-      <% form.label :completed, label: form.object.task.name %>
-      <%= form.input :completed, as: :boolean, label: form.object.task.name, :class=> 'check-it-btn' %> 
+      <%= form.label :completed, label: form.object.task.name %>
+      <%= form.input :completed, as: :boolean, label: false %> 
     <% end %> 
     <%= f.submit 'Complete' %>
 <% end %> 
