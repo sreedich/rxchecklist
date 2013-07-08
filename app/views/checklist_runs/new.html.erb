@@ -1,7 +1,7 @@
 <p>Analytics</p>
 <div class="check-stats">0/<%= @checklist_run.task_completions.count %></div>
 
-<div id="gauge" style="width:100px; height:80px"></div>
+<div id="gauge" style="width:300px; height:300px"></div>
 
 <%= @checklist.title %><br>
 <%= @checklist.description %>
@@ -13,22 +13,22 @@
     </tr>
   </thead>
   <tbody>
-  
+
 <%= simple_form_for [@checklist, @checklist_run] do |f| %>
     <%= f.simple_fields_for :task_completions do |form| %>
     <tr>
       <td> <%= form.input :completed, as: :boolean, label: false %></td>
-      <td><%= form.label :completed, label: form.object.task.name %></td>   
+      <td><%= form.label :completed, label: form.object.task.name %></td>
     </tr>
-      
-    <% end %> 
+
+    <% end %>
     <tr>
-       <td><%= f.submit 'Complete' %></td>  
-      <td></td>  
+       <td><%= f.submit 'Complete' %></td>
+      <td></td>
     </tr>
 
 
-<% end %> 
+<% end %>
 
   </tbody>
 </table>

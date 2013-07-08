@@ -17,8 +17,17 @@
 
 $(function(){
 
-  $("#flash").delay(2000).fadeOut();
+  window.gauge = new JustGage({
+    id: "gauge",
+    value: 0,
+    min: 0,
+    max: 100,
+    levelColors: ["feef00", "5bb65b"],
+    title: "Progress"
+  });
 
+
+  $("#flash").delay(2000).fadeOut();
 
   // find all checkboxes and attach change event handler --> run all code inside when change event occurs
   $('[type=checkbox]').change(function(e){
@@ -28,16 +37,11 @@ $(function(){
     var checked_count = $('[type=checkbox]:checked').length;
     var total_checks = $('[type=checkbox]').length;
     $('.check-stats').html(checked_count + "/" + total_checks);
-    
+
+    window.gauge.refresh(checked_count/total_checks *100);
+
   });
 
-  var g = new JustGage({
-    id: "gauge", 
-    value: 67, 
-    min: 0,
-    max: 100,
-    title: "Progress"
-  }); 
 
 
 
