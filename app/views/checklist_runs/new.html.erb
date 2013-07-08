@@ -10,17 +10,16 @@
     <tr>
       <th>
         <div class="check-stats">0/<%= @checklist_run.task_completions.count %></div>
-
       </th>
       <th></th>
     </tr>
   </thead>
   <tbody>
 
-<%= simple_form_for [@checklist, @checklist_run] do |f| %>
+    <%= simple_form_for [@checklist, @checklist_run] do |f| %>
     <%= f.simple_fields_for :task_completions do |form| %>
     <tr>
-      <td> <%= form.input :completed, as: :boolean, label: false %></td>
+      <td id="check-here"> <%= form.input :completed, as: :boolean, label: false %></td>
       <td><%= form.label :completed, label: form.object.task.name %></td>
     </tr>
 

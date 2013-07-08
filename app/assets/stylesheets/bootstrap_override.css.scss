@@ -151,27 +151,20 @@ a.check-link {
 
 
 // Checklist show page 
-
-.check-complete {
-  // margin-left: 200px;
+td#check-here{
+  width: 50px;
 }
 
-.check-tasks {
-  list-style: none;
-  padding: 20px;
-  border: black 2px solid;
-  width: 400px;
+td#check-show{
+  width: 50px;
+  height: 30px;
+  padding: 8px;
+}
+
+th.description {
+  line-height: 60px;
   font-size: 20px;
 }
-
-.check-descrip {
-  margin-left: -300px;
-}
-
-label.checkbox {
-
-}
-
 
 // Explore Page
 
@@ -195,11 +188,6 @@ label.checkbox {
 
 // user checklist page
 
-// input[type=checkbox] {
-//    position: absolute;
-//    top: -9999px;
-//    left: -9999px;
-// }
 
 
 

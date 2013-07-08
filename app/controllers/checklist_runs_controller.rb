@@ -16,7 +16,7 @@ class ChecklistRunsController < ApplicationController
   end
 
   def show
-    @checklist_run = current_user.checklist_runs
+    @checklist_run = ChecklistRun.find(params[:id])
   end 
 
   protected
