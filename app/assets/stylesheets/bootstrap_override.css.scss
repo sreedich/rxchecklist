@@ -193,5 +193,16 @@ label.checkbox {
 
 
 
+// user checklist page
+
+input[type=checkbox] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+
+
+
 // # leaving off need to figure out form-horizontal placement - it moves only when the rendered form is within the tags
 

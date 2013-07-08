@@ -15,7 +15,7 @@
 </div>
 
 <div class="pagination">
-  <%= paginate @checklists %>
+  <%= paginate @checklists  %>
 </div>
 
 <div>Featured</div>
@@ -30,7 +30,7 @@
 
 
 
-<div>Create New Checklist</div>
 
-<%= link_to "Create New Checklist", new_checklist_path %>
-
+<div align="center">
+<%= link_to "Create a New Checklist", new_checklist_path, :class => 'btn btn-success'  %>
+</div>
