@@ -18,8 +18,12 @@
 $(function(){
 
   $("#flash").delay(2000).fadeOut();
+
+
   
   $('[type=checkbox]').change(function(e){
+
+    $(e.target).closest('tr').toggleClass('success');
 
     var checked_count = $('[type=checkbox]:checked').length;
     var total_checks = $('[type=checkbox]').length;
