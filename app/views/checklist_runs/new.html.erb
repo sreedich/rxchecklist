@@ -5,13 +5,33 @@
 
 <%= @checklist.title %><br>
 <%= @checklist.description %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  
 <%= simple_form_for [@checklist, @checklist_run] do |f| %>
     <%= f.simple_fields_for :task_completions do |form| %>
-      <%= form.label :completed, label: form.object.task.name %>
-      <%= form.input :completed, as: :boolean, label: false %> 
+    <tr>
+      <td> <%= form.input :completed, as: :boolean, label: false %></td>
+      <td><%= form.label :completed, label: form.object.task.name %></td>   
+    </tr>
+      
     <% end %> 
-    <%= f.submit 'Complete' %>
+    <tr>
+       <td><%= f.submit 'Complete' %></td>  
+      <td></td>  
+    </tr>
+
+
 <% end %> 
+
+  </tbody>
+</table>
 
 <%# link_to 'Complete', new_checklist_checklist_run_path(@checklist) %>
 <!-- leaving off here - look at the nested resources for checklist run and controller  -->

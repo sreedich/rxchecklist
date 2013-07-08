@@ -1,16 +1,40 @@
+
+
 <p>Checklist Title</p>
 
 
 
-<%= simple_nested_form_for @checklist do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.fields_for :tasks do |task_form| %>
-  <%= task_form.input :name %>
-  <%= task_form.link_to_remove "Remove Task" %>
-  
-<% end %>
-  <%= f.link_to_add "Add Task", :tasks %>
-  <%= f.submit 'Create Checklist' %>
+<div class="row">
+  <div class="checklist-new">
+    <div class="span6">
+      <%= simple_nested_form_for @checklist do |f| %>
 
-<% end %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.fields_for :tasks do |task_form| %>
+        <%= task_form.link_to_remove "Remove Task", :class =>'check-link' %>
+          <%= task_form.input :name, input_html: {rows: 3} %>
+          
+        <% end %>
+
+        <div>
+         <%= f.link_to_add "Add Task", :tasks, :class =>'check-link' %>
+          <%= f.submit 'Create Checklist', :class => 'btn btn-create' %>
+        </div>
+   
+      <% end %>
+    </div>
+  </div> 
+  <div class="steps">
+    <div class="span6">
+      <h3>Steps to Create a New Checklist</h3>
+      <h4>1. Add a title</h4>
+      <h4>2. Add a description (optional)</h4>
+      <h4>3. Add a new tasks</h4>
+      <h4>4. Click Create Checklist </h4>
+    </div>
+  </div>
+</div>
+
+
+

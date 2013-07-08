@@ -1,14 +1,24 @@
-<div>Explore</div>
+<div class="span6 offset4" id="explore-title">
+  Explore
+</div>
 
-<%= search_form_for @q, url: explore_index_path, :builder => SimpleForm::FormBuilder do |f| %>
-  <div class="field">
-    <%= f.label :title_cont, "Name contains" %>
-    <%= f.text_field :title_cont %>
+<div class="row">
+  <div class='searching'>
+      <div class='form-inline'>
+      <%= search_form_for @q, url: explore_index_path, :builder => SimpleForm::FormBuilder do |f| %>
+          <% f.label :title_cont, "Name contains" %>
+          <%= f.text_field :title_cont, :placeholder => 'Search', :class => 'explore-search' %>
+          <%= f.submit "Search", :class => 'btn btn-search' %>
+      </div>
+      <% end %>
   </div>
-  <div class="actions"><%=f.submit "Search"%></div>
-<% end %>
+</div>
 
-<%= paginate @checklists %>
+<div class="pagination">
+  <%= paginate @checklists  %>
+</div>
+
+<div>Featured</div>
 
 <ul>
   <% @checklists.each do |c| %>
@@ -18,9 +28,9 @@
   <% end %>
 </ul>
 
-<div>Trending</div>
-<div>Featured</div>
-<div>Create New Checklist</div>
 
-<%= link_to "Create New Checklist", new_checklist_path %>
 
+
+<div align="center">
+<%= link_to "Create a New Checklist", new_checklist_path, :class => 'btn btn-success'  %>
+</div>
