@@ -16,7 +16,14 @@
 //= require jquery_nested_form
 
 $(function(){
+
+  $("#flash").delay(2000).fadeOut();
+
+
+  // find all checkboxes and attach change event handler --> run all code inside when change event occurs
   $('[type=checkbox]').change(function(e){
+// find the tr or row element that the checkbox is inside --> the closest thing thats a row and tonggle its class --> if it has success remove vice versa
+    $(e.target).closest('tr').toggleClass('success');
 
     var checked_count = $('[type=checkbox]:checked').length;
     var total_checks = $('[type=checkbox]').length;
@@ -31,5 +38,7 @@ $(function(){
     max: 100,
     title: "Progress"
   }); 
+
+
 
 });

@@ -1,10 +1,18 @@
+<div class="check-complete">
+  <div align="center">
+    <ul>
+      <h3><%= @checklist.title %></h3><br>
+    <div class="check-descrip">
+      <p><%= @checklist.description %></p>
+    </div>
+      <% @checklist.tasks.each do |task| %>
+    <div class="check-tasks">
+        <li><%= task.name %></li>
+    </div>
+      <% end %> 
+    </ul>
 
-<ul>
-<%= @checklist.title %><br>
-<%= @checklist.description %>
-<% @checklist.tasks.each do |task| %>
-<li><%= task.name %></li>
-<% end %> 
-</ul>
 
-<%= link_to 'Use Checklist', new_checklist_checklist_run_path(@checklist) %>
+    <%= link_to 'Use Checklist', new_checklist_checklist_run_path(@checklist),  :class => 'btn btn-create' %>
+  </div>
+</div>

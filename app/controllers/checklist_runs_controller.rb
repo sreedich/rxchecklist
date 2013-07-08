@@ -15,6 +15,10 @@ class ChecklistRunsController < ApplicationController
     end
   end
 
+  def show
+    @checklist_run = current_user.checklist_runs
+  end 
+
   protected
   def build_task_completions
     @checklist.tasks.each do |t|
