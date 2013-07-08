@@ -9,7 +9,6 @@ describe 'explore page' do
   it 'user visits explore page' do 
     visit explore_index_path  
     expect(page).to have_content 'Explore'
-    expect(page).to have_content 'Trending'
     expect(page).to have_content 'Featured'
     expect(page).to have_content 'Create New Checklist'
   end
@@ -26,7 +25,7 @@ describe 'explore page' do
     checklists 
     visit explore_index_path
     expect(page).to have_content checklists[0].title
-    expect(page).to have_content checklists[9].title
+    expect(page).to have_content checklists[4].title
   end 
 
   it 'user navigates to checklist show page' do 
@@ -46,12 +45,12 @@ describe 'explore page' do
     expect(page).to have_content checklists[9].title
   end
 
-  it 'user sees a list of 10 checklists' do 
+  it 'user sees a list of 5 checklists' do 
     sign_in_as(user)
     checklists
     visit explore_index_path
-    expect(page).to have_content checklists[9].title
-    expect(page).to_not have_content checklists[10].title
+    expect(page).to have_content checklists[4].title
+    expect(page).to_not have_content checklists[5].title
   end
 
   it 'user navigates to 2nd page of checklists' do 
@@ -59,8 +58,8 @@ describe 'explore page' do
     checklists
     visit explore_index_path
     click_on 'Next'
-    expect(page).to have_content checklists[10].title
-    expect(page).to_not have_content checklists[9].title
+    expect(page).to have_content checklists[5].title
+    expect(page).to_not have_content checklists[4].title
   end
 
 end 
