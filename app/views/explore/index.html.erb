@@ -1,9 +1,10 @@
-<div class="span6 offset4" id="explore-title">
+<div align="center" id="explore-title">
   Explore
 </div>
 
 <div class="row">
   <div class='searching'>
+    <div align="center">
       <div class='form-inline'>
       <%= search_form_for @q, url: explore_index_path, :builder => SimpleForm::FormBuilder do |f| %>
           <% f.label :title_cont, "Name contains" %>
@@ -11,6 +12,7 @@
           <%= f.submit "Search", :class => 'btn btn-search' %>
       </div>
       <% end %>
+    </div>
   </div>
 </div>
 
