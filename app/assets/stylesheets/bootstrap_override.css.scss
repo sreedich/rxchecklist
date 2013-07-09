@@ -115,7 +115,7 @@ text-shadow: 0 1px 0 white;
 
 #checklist-top {
   font-size: 50px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 
 #checklist_title {
@@ -151,11 +151,16 @@ a.check-link {
 
 
 .steps h3 {
-  margin-top: 15px;
+  margin-top: -60px;
 }
 
+.step-here {
+  width: 200px;
+}
 
-
+.check-steps {
+  margin-top: 35px;
+}
 
 // Checklist show page 
 td#check-here{
