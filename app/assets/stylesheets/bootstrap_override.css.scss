@@ -106,11 +106,17 @@ text-shadow: 0 1px 0 white;
   padding-top: 80px;
 }
 
-.site-footer {
-  height: 100px;
+.row.foot {
+  height: 200px;
 }
 
+
 // New Checklist Styling 
+
+#checklist-top {
+  font-size: 50px;
+  padding-bottom: 30px;
+}
 
 #checklist_title {
   width: 400px;
@@ -145,8 +151,9 @@ a.check-link {
 
 
 .steps h3 {
-  margin-top: -40px;
+  margin-top: 15px;
 }
+
 
 
 

@@ -17,7 +17,7 @@ describe 'explore page' do
     sign_in_as(user)  
     visit explore_index_path
     click_on 'Create a New Checklist'
-    expect(page).to have_content 'Checklist Title'
+    expect(page).to have_content 'Create a Checklist'
   end 
 
   it 'user can view a list of checklists' do 
