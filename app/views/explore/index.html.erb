@@ -14,23 +14,35 @@
   </div>
 </div>
 
-<div class="pagination">
-  <%= paginate @checklists  %>
+<div class="featured-list">
+  <div class="pagination">
+    <%= paginate @checklists  %>
+  </div>
+
+  <div id='featured'>Featured</div>
+
+<table class="table table-hover fixed">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+ 
+      <% @checklists.each do |c| %>
+       <tr>
+        <td id="explore-titles"> <%= c.title %></td>
+        <td> <%= c.description %></td>
+        <td id="see-details"><%= link_to 'See Details', checklist_path(c) %></td>
+        </tr>
+      <% end %>
+ 
 </div>
-
-<div>Featured</div>
-
-<ul>
-  <% @checklists.each do |c| %>
-   <li> <%= c.title %> </li>
-   <li> <%= c.description %></li>
-  <%= link_to 'See Details', checklist_path(c) %>
-  <% end %>
-</ul>
-
-
+ </tbody>
+</table>
 
 
 <div align="center">
-<%= link_to "Create a New Checklist", new_checklist_path, :class => 'btn btn-success'  %>
+<%= link_to "Create a New Checklist", new_checklist_path, :class => 'btn btn-success btn-explore'  %>
 </div>

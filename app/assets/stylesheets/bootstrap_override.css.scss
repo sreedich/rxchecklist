@@ -162,7 +162,6 @@ td#check-show{
 }
 
 th.description {
-  line-height: 60px;
   font-size: 20px;
 }
 
@@ -183,7 +182,33 @@ th.description {
   margin-left: 200px;
 }
 
+.featured-list {
+  margin-left: 180px;
+  padding-bottom: 50px;
+}
 
+#featured {
+  font-size: 25px;
+}
+
+
+.btn-success.btn-explore{
+  margin-top: 50px;
+  margin-right: 200px;
+}
+
+#explore-titles {
+  width: 150px;
+  font: 15px;
+}
+
+td#see-details {
+  width: 80px;
+}
+
+.table.table-hover.fixed {
+  // table-layout: fixed;
+}
 
 
 // user checklist page
