@@ -1,25 +1,55 @@
-
 <div class="row">
-  <div class="your-check">
-    <div class="span6">
-      Your Checklists <br>
-      <% current_user.checklists.each do |checklist|%>
-        <%= checklist.title %>
-        <%= link_to 'See Details', checklist_path(checklist) %><br>
-      <% end %>
-    </div>
+  <div class="your-check span6">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Your Checklists </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% current_user.checklists.each do |checklist|%>
+
+        <tr>
+          <td><%= checklist.title %></td>
+          <td> <%= link_to 'See Details', checklist_path(checklist) %></td>
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
   </div>
 
-  <div class="used-check">
-    <div class="span6">
-      Used Checklists<br>
-      <% current_user.checklist_runs.each do |run| %> 
+
+
+  <div class="used-check span6">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Used Checklists </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% current_user.checklist_runs.each do |run| %> 
         <%= link_to checklist_checklist_run_path(run.checklist, run) do %>
-          <%= run.checklist.title  %><br />
-          <%= run.checklist.description %><br /><br />
+
+        <tr>
+          <td><%= run.checklist.title  %></td>
+          <td><%= link_to 'See Details', checklist_checklist_run_path(run.checklist, run) %></td>
+        </tr>
         <% end %>
-      <% end %> 
-    </div>
+        <% end %> 
+
+      </tbody>
+    </table>
   </div>
+
+
+
+
+
 </div>
 
