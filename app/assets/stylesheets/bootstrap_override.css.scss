@@ -106,11 +106,17 @@ text-shadow: 0 1px 0 white;
   padding-top: 80px;
 }
 
-.site-footer {
-  height: 100px;
+.row.foot {
+  height: 200px;
 }
 
+
 // New Checklist Styling 
+
+#checklist-top {
+  font-size: 50px;
+  padding-bottom: 0px;
+}
 
 #checklist_title {
   width: 400px;
@@ -145,33 +151,31 @@ a.check-link {
 
 
 .steps h3 {
-  margin-top: -40px;
+  margin-top: -60px;
 }
 
+.step-here {
+  width: 200px;
+}
 
+.check-steps {
+  margin-top: 35px;
+}
 
 // Checklist show page 
-
-.check-complete {
-  // margin-left: 200px;
+td#check-here{
+  width: 50px;
 }
 
-.check-tasks {
-  list-style: none;
-  padding: 20px;
-  border: black 2px solid;
-  width: 400px;
+td#check-show{
+  width: 50px;
+  height: 30px;
+  padding: 8px;
+}
+
+th.description {
   font-size: 20px;
 }
-
-.check-descrip {
-  margin-left: -300px;
-}
-
-label.checkbox {
-
-}
-
 
 // Explore Page
 
@@ -181,25 +185,55 @@ label.checkbox {
 }
 
 .explore-search {
-  width: 400px;
-
+  width: 500px;
 }
 
 .form-inline {
   margin-top: 60px;
-  margin-left: 200px;
+  // margin-left: 200px;
+}
+
+.featured-list {
+  // margin-left: 180px;
+  padding-bottom: 50px;
+}
+
+#featured {
+  font-size: 25px;
 }
 
 
+.btn-success.btn-explore{
+  margin-top: 50px;
+  // margin-right: 200px;
+}
 
+#explore-titles {
+  width: 150px;
+  font: 15px;
+}
+
+td#see-details {
+  width: 80px;
+}
+
+.table.table-hover.fixed {
+  // table-layout: fixed;
+}
+
+
+//  Use Checklist page (analytics)
+th.analytics {
+  font-size: 20px;
+  position: absolute;
+}
+
+#gauge {
+  margin-left: 270px;
+}
 
 // user checklist page
 
-// input[type=checkbox] {
-//    position: absolute;
-//    top: -9999px;
-//    left: -9999px;
-// }
 
 
 

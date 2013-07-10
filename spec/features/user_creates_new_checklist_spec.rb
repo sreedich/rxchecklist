@@ -17,7 +17,7 @@ let(:user) {FactoryGirl.create(:user)}
   it 'user visits checklist builder page' do 
     sign_in_as(user)
     visit new_checklist_path
-    expect(page).to have_content 'Checklist Title'
+    expect(page).to have_content 'Create a Checklist'
   end 
 
   it 'allows a user to create a checklist' do 

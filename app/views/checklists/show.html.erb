@@ -1,18 +1,30 @@
-<div class="check-complete">
-  <div align="center">
-    <ul>
-      <h3><%= @checklist.title %></h3><br>
-    <div class="check-descrip">
-      <p><%= @checklist.description %></p>
-    </div>
+<div id="show-header">
+  <h1 id="title-show" align="center"><%= @checklist.title %></h1><br>
+</div>
+
+
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th class="description">Description:</th>
+      <th><%= @checklist.description %></th>
+    </tr>
+  </thead>
+  <tbody>
+
       <% @checklist.tasks.each do |task| %>
-    <div class="check-tasks">
-        <li><%= task.name %></li>
-    </div>
-      <% end %> 
-    </ul>
 
+    <tr>
+      <td id="check-show"> <%= check_box :nil, :nil %></td>
+      <td> <%= task.name %> </td>
+    </tr>
+    <% end %> 
+  
+  </tbody>
+</table>
 
+<div align="center">
     <%= link_to 'Use Checklist', new_checklist_checklist_run_path(@checklist),  :class => 'btn btn-create' %>
-  </div>
 </div>
