@@ -17,6 +17,8 @@
 
 $(function(){
 
+$("#flash").delay(2000).fadeOut();
+
   window.gauge = new JustGage({
     id: "gauge",
     value: 0,
@@ -27,7 +29,7 @@ $(function(){
   });
 
 
-  $("#flash").delay(2000).fadeOut();
+  
 
   // find all checkboxes and attach change event handler --> run all code inside when change event occurs
   $('[type=checkbox]').change(function(e){

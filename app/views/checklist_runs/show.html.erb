@@ -1,0 +1,23 @@
+<%= @checklist_run.checklist.title %>
+<%# @checklist_run.checklist.task_completion %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <% @checklist_run.task_completions.each do |completion| %>
+    <tr class="<%= 'success' if completion.completed %>">
+
+      <td> <%= check_box_tag '', 1, completion.completed, :disabled => true  %></td>
+      <td><%= completion.task.name %></td>   
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
