@@ -12,7 +12,7 @@ describe 'user profile page displays list of checklists' do
     expect(page).to have_content(checklist.title)
   end 
 
-# TODO: refactor this test 
+
 
   it 'displays a list of checklists used by user' do 
     sign_in_as(user)
