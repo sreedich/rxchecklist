@@ -26,6 +26,12 @@ class ChecklistsController < ApplicationController
     @checklist = Checklist.find(params[:id])
   end 
 
+  def destroy 
+    @checklist = Checklist.find(params[:id])
+    @checklist.destroy
+    redirect_to user_path(current_user)
+  end 
+
 end
 
 
