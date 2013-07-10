@@ -2,18 +2,17 @@
 <div class="row">
   <div class="your-check">
     <div class="span6">
-      Your Checklists 
+      Your Checklists <br>
       <% current_user.checklists.each do |checklist|%>
-        <%= checklist.title %><br>
-        <%= link_to 'See Details', checklist_path(checklist) %>
-        <%= checklist.description %>
+        <%= checklist.title %>
+        <%= link_to 'See Details', checklist_path(checklist) %><br>
       <% end %>
     </div>
   </div>
 
   <div class="used-check">
     <div class="span6">
-      Used Checklists
+      Used Checklists<br>
       <% current_user.checklist_runs.each do |run| %> 
         <%= link_to checklist_checklist_run_path(run.checklist, run) do %>
           <%= run.checklist.title  %><br />

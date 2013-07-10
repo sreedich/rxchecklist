@@ -4,7 +4,11 @@ class ChecklistsController < ApplicationController
   end 
 
   def new
+    if !current_user
+      redirect_to new_user_registration_path
+    else
     @checklist = current_user.checklists.build 
+    end
   end 
 
   def create
