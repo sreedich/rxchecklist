@@ -8,13 +8,12 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
-  has_many :checklists
-  has_many :checklist_runs
+  has_many :checklists, :dependent => :destroy
+  has_many :checklist_runs, :dependent => :destroy
   has_many :completed_checklists, 
     through: :checklist_runs,
     readonly: true, 
     source: :checklist 
 
-    #inverse, destroy dependency 
 
 end
