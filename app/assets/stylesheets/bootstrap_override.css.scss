@@ -12,9 +12,9 @@
  //    padding: 000;
  //  }
 #flash {
-  width: 60%;
+  width: 30%;
   position: absolute;
-  margin: 0 120px;
+  margin: -30px 60px;
 }
 
 
@@ -239,6 +239,11 @@ th.analytics {
   padding-right: 40px;
 }
 
+
+// login form
+.signs-in {
+  margin-left: 342px;
+}
 
 // # leaving off need to figure out form-horizontal placement - it moves only when the rendered form is within the tags
 
