@@ -9,7 +9,7 @@ let(:checklist) {FactoryGirl.create(:checklist)}
     sign_in_as(user) 
     visit checklist_path(checklist)
     click_on 'Use Checklist'
-    expect(page).to have_content 'Analytics'
+    expect(page).to have_content checklist.title
   end 
 
   pending 'user views checklist items' do
