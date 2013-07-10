@@ -3,7 +3,7 @@ class ChecklistRun < ActiveRecord::Base
   belongs_to :checklist 
   belongs_to :user
 
-  has_many :task_completions
+  has_many :task_completions, :dependent => :destroy
   accepts_nested_attributes_for :task_completions
 end
 
