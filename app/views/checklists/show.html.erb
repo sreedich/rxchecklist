@@ -28,3 +28,6 @@
 <div align="center">
     <%= link_to 'Use Checklist', new_checklist_checklist_run_path(@checklist),  :class => 'btn btn-create' %>
 </div>
+
+   <%= link_to 'Delete', checklist_path(@checklist), method: :delete %>
+
