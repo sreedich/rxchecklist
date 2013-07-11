@@ -2,6 +2,8 @@ RxchecklistApp::Application.routes.draw do
   
 
 
+  
+
   devise_for :users 
   resources :users 
 
@@ -11,7 +13,7 @@ RxchecklistApp::Application.routes.draw do
 
  
   resources :tasks 
-
+  resources :about, :only => [:index]
 
   resources :explore 
   resources :checklists do 
